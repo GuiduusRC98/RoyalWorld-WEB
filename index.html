@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3490DC">
+    <meta name="author" content="Azuriom">
+
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minepiece.net">
+    <meta property="og:image" content="https://minepiece.net/storage/img/icon.png">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="RoyalWorld">
+    
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="JiTpYBnPs3dySAttoS0OMBJru9X9HZzgxOEjYAiM">
+
+    <title>Inicio | RoyalWorld</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/icon_server.png">
+
+    <!-- Scripts -->
+    <script src="https://minepiece.net/assets/vendor/bootstrap/js/bootstrap.bundle.min.js?v1.1.5" defer></script>
+    <script src="https://minepiece.net/assets/vendor/axios/axios.min.js?v1.1.5" defer></script>
+    <script src="https://minepiece.net/assets/js/script.js?v1.1.5" defer></script>
+
+    <!-- Page level scripts -->
+    
+    <!-- Fonts -->
+    <link href="https://minepiece.net/assets/vendor/bootstrap-icons/bootstrap-icons.css?v1.1.5" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="https://minepiece.net/assets/vendor/bootstrap/css/bootstrap.min.css?v1.1.5" rel="stylesheet">
+    <link href="https://minepiece.net/assets/themes/minepiece/css/style.css?v1.1.5" rel="stylesheet">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/951696072a.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer=""></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <link href="https://minepiece.net/assets/themes/minepiece/css/achereth.css?v1.1.5" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="AC-Header">
+
+            <!--MENU-->
+<div id="mobileMenu" class="AC-mobile-overlay ">
+    <div class="AC-mobileNav-top">
+        <a href="javascript:void(0)" class="AC-closeBtn " onclick="closeMenu()">&times;</a>
+    </div>
+
+    <div class="AC-mobileHeader">
+        <p class="AC-mobileHead-title">NAVEGACION</p>
+        <hr class="AC-mobileHead-hr"></hr>
+    </div>
+
+    <div class="AC-mobileContent">
+                                    <a href="https://minepiece.net" class="AC-mobileNavLink">Inicio</a>
+                                                <a href="https://minepiece.net/vote" class="AC-mobileNavLink">Mods</a>
+                                                <!-- <a href="https://google.fr" class="AC-mobileNavLink">Wiki</a> -->
+                                                <a href="https://minepiece.net/rules" class="AC-mobileNavLink">Reglas</a>
+                            
+        <a href="https://store.minepiece.net" class="AC-mobileNavLink"><i class="bi bi-bag-heart-fill"></i>Tienda</a>
+    </div>
+</div>
+<!--MENU-->
+
+<!--NAVBAR-->
+<div class="AC-navBar">
+
+    <div class="AC-navBar-width">
+
+        <div class="AC-navBar-left">
+            <a href="#" class="AC-Logo">
+                <img src="./img/icon_server.png" class="AC-Branding"/>
+            </a>
+
+            <div class="AC-NavLinks">
+                                                <a href="https://minepiece.net" class="AC-navLink  active ">Inicio</a>
+                                                                <a href="https://minepiece.net/vote" class="AC-navLink ">Mods</a>
+                                                                <!-- <a href="https://google.fr" class="AC-navLink ">Wiki</a> -->
+                                                                <a href="https://minepiece.net/rules" class="AC-navLink ">Reglas</a>
+                                        </div>
+
+        </div>
+
+        <div class="AC-navBar-right">
+            <a href="https://store.minepiece.net" class="AC-navLink-btn"></i>Tienda</a>
+            <a href="#" class="AC-mobileLink" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
+
+        </div>
+
+    </div>
+
+</div>    
+</div>
+
+<div id="app">
+    
+    <div class="header">
+        <video id="background-video" autoplay loop muted poster="https://minepiece.net/assets/themes/minepiece/img/bg.png?v1.1.5">
+            <source src="https://minepiece.net/assets/themes/minepiece/img/video.webm?v1.1.5" type="video/webm">
+            <source src="https://minepiece.net/assets/themes/minepiece/img/video.mp4?v1.1.5" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <img src="./img/icon_server.png" class="header-content-image">
+            <a href="#how-to-join">Únete ahora</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="status-message"></div>
+
+        <div class="row infos">
+            <div class="col-lg-4">
+                 <div class="card online-count">
+                    <div class="text">
+                        <span>SERVER STATUS</span>
+                        <h3>186  ONLINE PLAYERS</h3>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-4">
+                <a href="https://discord.gg/HYkBnRjgyj" class="card discord">
+                        <img src="https://minepiece.net/assets/themes/minepiece/img/discord.png?v1.1.5">
+                        <div class="text">
+                            <h1>DISCORD</h1>
+                             <p>Únete <!-- <span id="memberCount"></span> --> a nuestra comunidad</p> 
+                        </div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+<!--                 <div class="card links">
+                    <a href="https://rivrs.io"><img src="https://minepiece.net/assets/themes/minepiece/img/rivrs.png?v1.1.5"></a>
+                    <a href="https://www.tiktok.com/@playminepiece"><img src="https://minepiece.net/assets/themes/minepiece/img/tiktok.png?v1.1.5"></a>
+                </div> -->
+            </div>
+        </div>
+
+                    <div class="AC-MessageCard">
+                <div class="card-body">
+                    
+                </div>
+            </div>
+        
+    </div>
+
+        <div class="articles">
+            <div class="container">
+                <div class="carousel">
+                    <ol class="carousel__viewport">
+                                                                        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper">
+                                    <div class="article">
+                                        <div class="text">
+                                            <span>NEWS</span>
+                                            <h1>The new version of <span>MinePiece</span> is here!</h1>
+                                            <h3>Achereth | Nov 27 2023</h3>
+                                            <p>You&#039;ve been waiting for it, here it is. The new version of MinePiece will be available on December 2 2023</p>
+                                            <a href="https://minepiece.net/news/article1">Read article <img src="https://minepiece.net/assets/themes/minepiece/img/arrow.png?v1.1.5"></a>
+                                        </div>
+                                        <div class="image">
+                                            <img src="https://minepiece.net/storage/posts/SfkEcxn5FZdpayspZtHgpoxWRndyTXg5WJWB9DuG.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                                                                                <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper">
+                                    <div class="article">
+                                        <div class="text">
+                                            <span>NEWS</span>
+                                            <h1>How to join <span>MinePiece</span>?</h1>
+                                            <h3>Achereth | Nov 27 2023</h3>
+                                            <p>All the info you need to join the server</p>
+                                            <a href="https://minepiece.net/news/article2">Read article <img src="https://minepiece.net/assets/themes/minepiece/img/arrow.png?v1.1.5"></a>
+                                        </div>
+                                        <div class="image">
+                                            <img src="https://minepiece.net/storage/posts/NneWePlKht9hJ88Jz9rzwA0jlcJfJJ82ZwcFvi7L.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                                                                                <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                                <div class="carousel__snapper">
+                                    <div class="article">
+                                        <div class="text">
+                                            <span>NEWS</span>
+                                            <h1>How to get started on <span>MinePiece</span>?</h1>
+                                            <h3>Achereth | Nov 27 2023</h3>
+                                            <p>We give you all the keys to a successful One Piece quest !</p>
+                                            <a href="https://minepiece.net/news/article3">Read article <img src="https://minepiece.net/assets/themes/minepiece/img/arrow.png?v1.1.5"></a>
+                                        </div>
+                                        <div class="image">
+                                            <img src="https://minepiece.net/storage/posts/jgnHLmI304xyPcaaSDNsO7kLHuwxoYIv7Kx6OER0.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                                                                </ol>
+                    <aside class="carousel__navigation">
+                        <ol class="carousel__navigation-list">
+                            <li class="carousel__navigation-item">
+                                <div class="carousel__navigation-button nav1"></div>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <div class="carousel__navigation-button nav2"></div>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <div class="carousel__navigation-button nav3"></div>
+                            </li>
+                        </ol>
+                    </aside>
+                    <div class="see-all">
+                        <a href="/news">View all <img src="https://minepiece.net/assets/themes/minepiece/img/arrow2.png?v1.1.5"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="store">
+            <div class="image">
+                <img src="https://minepiece.net/assets/themes/minepiece/img/store.png?v1.1.5">
+            </div>
+            <div class="text">
+                <span>TIENDA</span>
+                <h2>LA TIENDA DE</h2>
+                <h1>ROYALWORLD</h1>
+                <p>Explora la tienda de RoyalWorld y desbloquea elementos y herramientas para que tu aventura sea inolvidable. Apoyanos ahora y disfruta de compras seguras en RoyalWorld. ¡Únase a nosotros en nuestra busqueda de lo extraordinario!</p>
+                <a href="https://store.minepiece.net">Descubre la tienda</a>
+            </div>
+        </div>
+        <div class="how-to-join" id="how-to-join">
+            <div class="text">
+                <span>¿Como juego en RoyalWorld?</span>
+                <h2>COMO UNIRSE A NUESTRO</h2>
+                <h1>SERVIDOR</h1>
+                <p>Unase a nosotros en la version 1.20.1 y con la IP <strong>Mcroyalworld.online</strong><br>
+                Para unirse a nosotros , todo lo que necesitas es instalar nuestro pack de mods.<br>
+                Únete a esta asombrosa aventura, ¡Asi que no esperes más!</p>
+                <a id="changeText" onclick="copied()">Copiar IP</a>
+            </div>
+            <div class="image">
+                <img src="https://minepiece.net/assets/themes/minepiece/img/minepiece_ip.png?v1.1.5">
+            </div>
+        </div>
+
+    <script>
+        function copied() {
+            var x = document.getElementById("changeText");
+            if (x.innerHTML === "Copiar IP") {
+                x.innerHTML = "IP copiada !";
+                navigator.clipboard.writeText("Mcroyalworld.online");
+                setTimeout(function(){revertBack()}, 2000);
+            } else {
+                x.innerHTML = "Copiar IP";
+            }
+        }
+    </script>
+
+    <script>
+        function revertBack() {
+            var x = document.getElementById("changeText");
+            if (x.innerHTML === "IP copiada !") {
+                x.innerHTML = "Copiar IP";
+            } else {
+                x.innerHTML = "Copiar IP";
+            }
+        }
+    </script>
+
+    <script defer>
+        function discordAPI() {
+            var init = {
+                method: 'GET',
+                mode: 'cors',
+                cache: 'reload'
+            }
+            fetch('https://discord.com/api/guilds/1158466495286870028/widget.json', init).then(function(response) {
+                    if (response.status != 200) {
+                        console.log("it didn't work" + response.status);
+                        return
+                    }
+                    response.json().then(function(data) {
+                        document.getElementById("memberCount").innerHTML = data.presence_count;
+                    })
+                })
+                .catch(function(err) {
+                    console.log('fetch error: ' + err)
+                })
+
+
+        }
+        discordAPI()
+    </script>
+</div>
+
+<div class="footer">
+    <div class="float-left">
+        <img src="https://minepiece.net/assets/themes/minepiece/img/rivrs2.png?v1.1.5">
+        <div class="text">
+            <p><strong>MinePiece &copy; 2023</strong></p>
+            <p>We are not affiliated with Mojang AB.</p>
+            <!--<p>Site Propulsé par <a class="credit" href="https://azuriom.com">Azuriom</a></p>-->
+            <a href="https://minepiece.net/vote">Vote</a>
+            <a href="https://minepiece.net/rules">Rules</a>
+            <a href="https://store.minepiece.net">Store</a>
+            <!-- <a href="https://minepiece.net/terms">CGU - CGV</a> -->
+        </div>
+    </div>
+    <div class="float-right">
+        <div class="links">
+            <ul>
+                <li>
+                    <h1>Site Map</h1>
+                </li>
+                <li>
+                    <a href="https://minepiece.net/vote">Vote</a>
+                </li>
+                <li>
+                <a href="https://minepiece.net/rules">Rules</a>
+                </li>
+                <li>
+                <a href="https://store.minepiece.net">Store</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mentions">
+            <ul>
+                <li>
+                    <h1>Terms & Conditions</h1>
+                </li>
+                <li>
+                    <a href="https://minepiece.net/terms">CGU</a>
+                </li>
+                <li>
+                    <a href="https://minepiece.net/terms">CGV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--SCRIPT-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    function openMenu() {
+        document.getElementById("mobileMenu").style.height = "100%";
+    }
+
+    function closeMenu() {
+        document.getElementById("mobileMenu").style.height = "0%";
+    }
+</script>
+
+<script>
+    new ClipboardJS('.copyIP');
+</script>
+
+</body>
+</html>
